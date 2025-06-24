@@ -30,11 +30,6 @@ jobs:
           cd frontend
           npm run build
 
-      - name: Export static site
-        run: |
-          cd frontend
-          npm run export
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
