@@ -34,6 +34,8 @@ applyTo: "**"
 ## Git & Project Structure
 - Commit small, focused changes with clear messages.
 - Follow the conventional commit format: `type(scope): subject` (e.g., `feat(farmer-portal): add crop management feature`).
+- **Existing commit scopes:** `homepage`, `deploy`, `404`
+- If your change does not fit an existing commit scope, update this list with the new scope in the coding standards before committing.
 - Exclude environment files, build artifacts, and secrets using .gitignore.
 - Follow the documented folder structure in the project README.
 
