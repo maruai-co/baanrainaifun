@@ -70,7 +70,7 @@ export default function HomePage() {
       {/* Welcome Section */}
       <section className="py-20 md:py-28 bg-gradient-to-r from-orange-100/70 via-amber-100/70 to-yellow-100/70">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto min-h-[340px] md:min-h-[420px] flex flex-col justify-center">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-amber-900 font-serif leading-tight">{t.welcome}</h2>
             <p className="text-xl md:text-2xl text-amber-800 mb-4 font-medium">{t.subtitle}</p>
             <p className="text-lg text-amber-700 max-w-2xl mx-auto leading-relaxed">{t.description}</p>
