@@ -93,7 +93,7 @@ export default function HomePage() {
             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group bg-white border-orange-200 hover:border-orange-300">
               <div className="relative h-72 overflow-hidden">
                 <Image
-                  src="/story.jpg"
+                  src={process.env.NEXT_PUBLIC_BASE_PATH ? `${process.env.NEXT_PUBLIC_BASE_PATH}/story.jpg` : "/baanrainaifun/story.jpg"}
                   alt="Our Story"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -110,7 +110,7 @@ export default function HomePage() {
             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group bg-white border-orange-200 hover:border-orange-300">
               <div className="relative h-72 overflow-hidden">
                 <Image
-                  src="/cafe.jpg"
+                  src={process.env.NEXT_PUBLIC_BASE_PATH ? `${process.env.NEXT_PUBLIC_BASE_PATH}/cafe.jpg` : "/baanrainaifun/cafe.jpg"}
                   alt="Cafe & Restaurant"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -127,7 +127,7 @@ export default function HomePage() {
             <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer group bg-white border-orange-200 hover:border-orange-300">
               <div className="relative h-72 overflow-hidden">
                 <Image
-                  src="/homestay.jpg"
+                  src={process.env.NEXT_PUBLIC_BASE_PATH ? `${process.env.NEXT_PUBLIC_BASE_PATH}/homestay.jpg` : "/baanrainaifun/homestay.jpg"}
                   alt="Home Stay"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
