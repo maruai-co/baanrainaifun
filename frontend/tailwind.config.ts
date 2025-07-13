@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
 import type { Config } from "tailwindcss"
+import tailwindcssAnimate from "tailwindcss-animate"
 
 const config: Config = {
   darkMode: "class",
@@ -21,39 +21,47 @@ const config: Config = {
     },
     extend: {
       colors: {
+        // shadcn/ui colors using CSS variables
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#fefcf8",
-        foreground: "#3c2e26",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         primary: {
-          DEFAULT: "#d97706",
-          foreground: "#fefcf8",
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
         },
         secondary: {
-          DEFAULT: "#f59e0b",
-          foreground: "#3c2e26",
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
+        },
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
-        muted: {
-          DEFAULT: "#f7f3ed",
-          foreground: "#6b5b4f",
-        },
-        accent: {
-          DEFAULT: "#fed7aa",
-          foreground: "#3c2e26",
-        },
         popover: {
-          DEFAULT: "#fefcf8",
-          foreground: "#3c2e26",
+          DEFAULT: "var(--popover)",
+          foreground: "var(--popover-foreground)",
         },
         card: {
-          DEFAULT: "#ffffff",
-          foreground: "#3c2e26",
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
         },
+        // Alternative direct colors for testing
+        green: {
+          dark: "#0A400C",
+          medium: "#819067", 
+          light: "#B1AB86",
+        },
+        cream: "#FEFAE0",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,7 +88,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 } satisfies Config
 
 export default config
